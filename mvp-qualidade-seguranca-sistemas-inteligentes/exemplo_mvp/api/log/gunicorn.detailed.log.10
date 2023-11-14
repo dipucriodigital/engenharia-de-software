@@ -1,0 +1,7 @@
+[2023-11-13 18:06:15,785] INFO _log() L96   127.0.0.1 - - [13/Nov/2023 18:06:15] "[35m[1mGET /paciente?name=Lucas HTTP/1.1[0m" 500 - - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-11-13 18:06:16,305] INFO _log() L96   127.0.0.1 - - [13/Nov/2023 18:06:16] "GET /pacientes HTTP/1.1" 200 - - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-11-13 18:06:24,677] INFO _log() L96   127.0.0.1 - - [13/Nov/2023 18:06:24] "GET /pacientes HTTP/1.1" 200 - - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-11-13 18:06:26,011] INFO _log() L96    * Detected change in '/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/app.py', reloading - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-11-13 18:06:27,922] INFO _log() L96   127.0.0.1 - - [13/Nov/2023 18:06:27] "GET /pacientes HTTP/1.1" 200 - - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-11-13 18:06:31,977] INFO _log() L96   127.0.0.1 - - [13/Nov/2023 18:06:31] "GET /pacientes HTTP/1.1" 200 - - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-11-13 18:06:32,052] INFO _log() L96    * Detected change in '/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/app.py', reloading - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
