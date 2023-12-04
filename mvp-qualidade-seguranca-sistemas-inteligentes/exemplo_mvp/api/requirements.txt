@@ -11,3 +11,4 @@ scikit-learn
 pandas
 scikit-learn
 numpy
+pytest
