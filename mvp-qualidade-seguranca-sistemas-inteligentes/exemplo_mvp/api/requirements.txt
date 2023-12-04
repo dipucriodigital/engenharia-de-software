@@ -8,3 +8,6 @@ SQLAlchemy
 SQLAlchemy-Utils
 typing_extensions
 scikit-learn
+pandas
+scikit-learn
+numpy
