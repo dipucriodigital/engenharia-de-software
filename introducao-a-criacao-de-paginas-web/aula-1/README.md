@@ -9,6 +9,6 @@ Conteúdo
 
 Outros links que podem ser interessantes:
 * [Aula 2](../aula-2): Nossa segunda aula
-* [Aula 3](../aula-2): Nossa terceira aula
-* [Imagens](../iamges): Diretório com as imagens que vamos usar
+* [Aula 3](../aula-3): Nossa terceira aula
+* [Imagens](../imagens): Diretório com as imagens que vamos usar
 * [Editor de MarkDown](https://jbt.github.io/markdown-editor/): O editor que eu usei para esse texto
