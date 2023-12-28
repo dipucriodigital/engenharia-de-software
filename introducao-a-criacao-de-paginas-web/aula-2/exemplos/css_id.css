@@ -1,0 +1,18 @@
+body {
+    background-color: #F0F0F0;
+}
+
+.texto {
+    color: #0066CC;
+    font-family: Arial, sans-serif;
+}
+
+.destaque {
+    border: 1px solid #999;
+}
+
+#alerta {
+    font-weight: bold;
+    color: #FF0000;
+}
+
