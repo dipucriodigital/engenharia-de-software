@@ -8,7 +8,7 @@ body {
 estilos globais 
 */
 .nextPage {
-    position: absolute;     /* posicionado de forma absoluta */
+    position: fixed;        /* posicionado de forma fixa */
     bottom: 10px;           /* distância da parte de baixo */
     right: 10px;            /* distância do lado direito */
     display: flex;          /* facilita o alinhamento vertical/horizontal */
@@ -18,7 +18,7 @@ estilos globais
 }
 
 .previousPage {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     display: flex;
@@ -185,9 +185,7 @@ Recordes
  * Para tornar as nossas páginas responsivas
  */
 @media(max-width: 991px) {
-    /*
-     * Regras
-     */
+    /* Regras */
     .regras {
         flex-direction: column;
     }
@@ -195,27 +193,21 @@ Recordes
         height: 100%;
     }
 
-    /*
-     * Tabuleiro
-     */
-
-     .tabuleiro {
+    /* Tabuleiro */
+    .tabuleiro {
         flex-direction: column-reverse;
+        height: 100%;
     }
-    
     .pontos th {
         font-size: 30px;
     }
-
     .pontos td:first-child {
         font-size: 20px;
     }
-
     .gramado {
         width: 400px;
         height: 400px;
     }
-
     .pontos {
         width: 400px;
         height: 400px;
@@ -224,21 +216,18 @@ Recordes
         padding: 10px 30px 10px 30px;
     }
 
-    /*
-     * Recordes
-     */
+    /* Recordes */
      .records tr th {
         padding-left: 10px;
         padding-right: 10px;
     }
-    
     .records th {
         font-size: 18px;
     }
-    
     .records td {
         padding-left: 10px;
         padding-right: 10px;
         font-size: 15px;
     }
 }
+
