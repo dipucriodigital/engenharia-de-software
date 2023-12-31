@@ -1,0 +1,145 @@
+/*
+Seletores
+tag     -> todos os elementos dessa tag HTML
+.classe -> elementos da classe
+#id     -> elemento com determinado ID
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/*
+Menu de navegação
+*/
+nav {
+    background-color: #333333;  /* fundo preto */
+    color: #FFFFFF;             /* letra branca - não afeta os links */
+    text-align: center;           /* centraliza o texto */
+    padding: 20px 0;              /* padding superior/inferior e direita/esquerda */
+}
+
+nav a {     /* somente links dentro de <nav> */
+    color: #FFFFFF;       /* letra branca */
+    text-decoration: none;  /* sem sublinhado no link */
+    padding: 14px 16px;     /* afasta um link do outro */
+}
+
+nav a:hover {   /* quando o mouse estiver sobre */
+    background-color: #dddddd;
+    color: #000000;
+}
+
+/*
+Cabeçalho
+*/
+header {
+    display: flex;                      /* container com formatação flexível */
+    justify-content: space-between;     /* coloca o texto à esquerda e o logotipo à direita */
+    padding: 0 50px;                    /* um pouco de espaçamento da margem */
+    align-items: center;                /* itens centralizados verticalmente */
+}
+
+/*
+Conteúdo jornalístico
+*/
+#index {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section h2 {
+    color: #333;    /* cor da letra do subtítulo */
+}
+
+section ul {
+    list-style-type: none;  /* sem indicador de lista */
+    padding: 0;
+}
+
+#index a {
+    color: #333;                  /* cor do texto do link */
+    text-decoration: none;          /* sem sublinhado */
+    background-color: #f0f0f0;    /* cor de fundo do link */
+    padding: 10px;                  /* espaço a volta do link */
+    border-radius: 5px;             /* borda arredondada */
+    display: block;
+}
+
+section li {    
+    margin-bottom: 10px;    /* espaço vertical entre as linhas do índice */
+}
+
+#index a:hover {
+    background-color: #ddd;
+}
+
+.articles-container {
+    column-count: 2;                /* número de colunas */
+    column-gap: 20px;               /* espaço entre as colunas */
+    margin: 50px 100px auto 100px;  /* margem entre o texto e a borda */
+}
+
+@media(max-width: 991px) {          /* Regras para formatos pequenos */
+    .articles-container {
+        column-count: 1;            /* número de colunas */
+        margin: 50px 30px auto 30px;/* menos espaço entre elementos */
+    }
+}
+
+article {
+    border: 1px solid #000000;
+    padding: 10px;
+    break-inside: avoid;    /* para que o último article de uma coluna não passe para a outra coluna */
+    margin-bottom: 20px;
+}
+
+/*
+Rodapé
+*/
+footer {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff;            /* Cor do texto no rodapé */
+    padding: 20px;
+    margin-top: 10px;           /* Para separar o rodapé da seção anterior */
+}
+
+/* Estilo para as seções dentro do rodapé (Endereço, Contatos, Redes Sociais) */
+footer div {
+    margin-bottom: 20px; /* Espaço entre as seções do rodapé */
+}
+
+.endereco p {
+    margin: 0;  /* coloca as linhas do endereço mais próximas uma da outra */
+}
+
+/* Estilo para as listas dentro do rodapé */
+footer ul {
+    list-style: none;   /* Remove marcadores de lista */
+    padding: 0;         /* Remove o espaçamento interno padrão das listas */
+}
+
+.social-media {
+    display: flex;          /* container com formatação flex */
+    align-items: center;    /* alinhar os ícones verticalmente pelo centro */
+}
+
+.social-media img {
+    width: 30px;                /* Largura fixa para as imagens */
+    margin-right: 10px;         /* Espaço entre as imagens de redes sociais */
+    filter: grayscale(100%);    /* torna o ícone P&B */
+}
+
+.social-media img:hover {
+    filter: grayscale(0%);  /* o ícone volta a ser colorido */
+}
+
+
+
+
+
+
+
+
+
+
