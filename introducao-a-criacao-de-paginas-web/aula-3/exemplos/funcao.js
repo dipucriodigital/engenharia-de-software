@@ -1,12 +1,9 @@
-
-
 function nomeDaFuncao(parametros, separados, por, virgula) {
     // comentário
     // corpo da função
     // código JavaScript
     return; // ou return valor ==> ambos opcionais
 }
-
 
 function calculaDistancia(x,y) {
     var distancia = Math.sqrt(x*x + y*y);
