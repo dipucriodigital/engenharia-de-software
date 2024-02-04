@@ -1,0 +1,236 @@
+body {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+/* 
+estilos globais 
+*/
+.nextPage {
+    position: fixed;        /* posicionado de forma fixa */
+    bottom: 10px;           /* distância da parte de baixo */
+    right: 10px;            /* distância do lado direito */
+    display: flex;          /* facilita o alinhamento vertical/horizontal */
+    align-items: center;    /* centraliza o conteúdo na vertical */
+    justify-content: center;/* centraliza o conteúdo na horizontal */
+    z-index: 3;
+}
+
+.previousPage {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.circulo {
+    background-color: #CCCCCC;/* Cor de fundo do círculo */
+    border-radius: 50%;         /* Torna o contêiner um círculo */
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+}
+
+/* 
+Home-Page 
+*/
+.banner {
+    height: 100vh;  /* toda altura do viewport */
+    padding: 0;     /* sem distância para o elemento interno */
+}
+
+.banner img {
+    position: absolute; /* posicionado de forma absoluta */
+    top: 0;             /* distância do topo */
+    left: 0;            /* distância do lado esquerdo */
+    width: 100%;        /* largura */
+    height: 100%;       /* altura */
+    object-fit: cover;  /* manter a proporção e cortar se necessário
+                           para cobrir toda a área disponível */
+}
+
+/*
+Regras
+*/
+.regras {
+    height: 100vh;
+    display: flex;
+    background-color: #D0D0D0;
+}
+
+.regras .contentBox {
+    width: 100%;
+    padding: 50px;
+    background-color: #C0C0C0;
+}
+
+.regras .imgBox {
+    width: 100%;
+    background: url(../images/Mole.png);    /* url da imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*
+Tabuleiro
+*/
+.tabuleiro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00FF00;
+}
+
+.gramado {
+    width: 536px;
+    height: 536px;
+    background-color: #008000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;    /* permite quebra de linha nos buracos */
+    cursor: url(../images/hammer.png), crosshair;
+    padding: 0px;
+}
+
+.gramado img {
+    padding: 25px 50px 25px 50px;
+    box-sizing: content-box;    /* incluído por causa do bootstrap */
+    width: 76px;
+    height: 61px;
+}
+
+.pontos {
+    width: 536px;
+    height: 536px;
+    display: flex;
+    justify-content: center;
+}
+
+.pontos th {
+    font-size: 50px;
+    font-family: 'Bungee Spice', sans-serif;
+    text-align: center;
+}
+
+.pontos td:first-child {
+    text-align: right;
+    font-size: 36px;
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+#start {
+    width: 100%;
+    font-size: 36px;
+    border: 1px solid #000000;
+}
+
+/*
+Recordes
+*/
+.records {
+    height: 100vh;              /* ocupa toda a área do viewport */
+    display: flex;              /* modo flex de alinhamento */
+    align-items: center;        /* centraliza na vertical */
+    justify-content: center;    /* centraliza na horizontal */
+}
+
+.records table {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-collapse: collapse;
+    font-family: 'MedievalSharp', cursive;
+}
+
+.records th {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #FFFFFF;             /* cor da letra */
+    background-color: #000000;  /* cor do fundo */
+    text-align: center;
+    font-size: 36px;
+}
+
+.records td {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 30px;
+}
+
+.records tr:nth-child(even) {   /* seleciona apenas as linhas pares */
+    background-color: #C0C0C0;
+}
+
+.records td:first-child, td:nth-child(3) {  /* alinha à direita a 1a e a 3a colunas */
+    text-align: right;
+    padding-right: 20px;
+}
+
+/*
+ * Para tornar as nossas páginas responsivas
+ */
+@media(max-width: 991px) {
+    /* Regras */
+    .regras {
+        flex-direction: column;
+    }
+    .regras .contentBox {
+        width: unset;   /* verificar */
+    }
+    .regras .imgBox {
+        height: 100%;
+    }
+
+    /* Tabuleiro */
+    .tabuleiro {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    .pontos th {
+        font-size: 30px;
+    }
+    .pontos td:first-child {
+        font-size: 20px;
+    }
+    .gramado {
+        width: 400px;
+        height: 400px;
+    }
+    .pontos {
+        width: 400px;
+        height: 400px;
+    }    
+    .gramado img {
+        padding: 10px 30px 10px 30px;
+    }
+
+    /* Recordes */
+     .records tr th {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .records th {
+        font-size: 18px;
+    }
+    .records td {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 15px;
+    }
+}
+
