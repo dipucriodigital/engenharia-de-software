@@ -13,6 +13,6 @@ Conteúdo
 * [__noticias__](./noticias): Portal de notícias
 
 Outros links que podem ser interessantes:
-* [Aula 1](../aula-1): Nossa segunda aula
+* [Aula 1](../aula-1): Nossa primeira aula
 * [Aula 3](../aula-3): Nossa terceira aula
 * [Imagens](../imagens): Diretório com as imagens que vamos usar
