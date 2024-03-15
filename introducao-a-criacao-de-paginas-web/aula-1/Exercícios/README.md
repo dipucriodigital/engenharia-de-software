@@ -16,8 +16,9 @@ Nos exercícios a seguir, teste cada página criada mas não se esqueça de vali
 1. Crie uma página HTML para mostrar dados sobre os planetas do nosso sistema solar. 
 Exiba os dados em formato de uma tabela semelhante a da figura a seguir ([Micescu, Nicolae & Barna, Emil & Mircea, Victor & Rusu, Mircea. A NEW E-LEARNING CURRICULUM FOR HIGH SCHOOL PHYSICS.](https://www.researchgate.net/publication/268419560_A_NEW_E-LEARNING_CURRICULUM_FOR_HIGH_SCHOOL_PHYSICS)).
 A tabela original está no seguinte [link](https://www.researchgate.net/figure/The-relevant-data-on-the-planets-from-our-Solar-system_tbl2_268419560). Inclua na página um título, algum texto e um link para a fonte original da tabela.
-![Exemplo de tabela com dados](../../imagens/The-relevant-data-on-the-planets-from-our-Solar-system.png)
 [[Sugestão de solução](soluções/solução4.html)]
+
+   ![Exemplo de tabela com dados](../../imagens/The-relevant-data-on-the-planets-from-our-Solar-system.png)
 
 __DESAFIO__
 
