@@ -1,105 +1,38 @@
-[2023-11-13 20:48:17,365] ERROR _log() L96   Error on request:
-Traceback (most recent call last):
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 897, in run_command
-    app = info.load_app()
-          ^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 312, in load_app
-    app = locate_app(import_name, None, raise_if_not_found=False)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 223, in locate_app
-    raise NoAppException(
-flask.cli.NoAppException: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 218, in locate_app
-    __import__(module_name)
-  File "/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/app.py", line 9, in <module>
-    from schemas import *
-  File "/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/schemas/__init__.py", line 1, in <module>
-    from schemas.paciente_schema import PacienteSchema,  PacienteBuscaSchema, PacienteViewSchema, PacienteDelSchema, \
-ImportError: cannot import name 'predict_diabetes' from 'schemas.paciente_schema' (/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/schemas/paciente_schema.py) - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
-[2023-11-13 20:48:17,952] INFO _log() L96   127.0.0.1 - - [13/Nov/2023 20:48:17] "[35m[1mGET /pacientes HTTP/1.1[0m" 500 - - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
-[2023-11-13 20:48:17,982] ERROR _log() L96   Error on request:
-Traceback (most recent call last):
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 897, in run_command
-    app = info.load_app()
-          ^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 312, in load_app
-    app = locate_app(import_name, None, raise_if_not_found=False)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 223, in locate_app
-    raise NoAppException(
-flask.cli.NoAppException: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 218, in locate_app
-    __import__(module_name)
-  File "/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/app.py", line 9, in <module>
-    from schemas import *
-  File "/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/schemas/__init__.py", line 1, in <module>
-    from schemas.paciente_schema import PacienteSchema,  PacienteBuscaSchema, PacienteViewSchema, PacienteDelSchema, \
-ImportError: cannot import name 'predict_diabetes' from 'schemas.paciente_schema' (/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/schemas/paciente_schema.py) - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
-[2023-11-13 20:48:23,487] INFO _log() L96   127.0.0.1 - - [13/Nov/2023 20:48:23] "[35m[1mGET /pacientes HTTP/1.1[0m" 500 - - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
-[2023-11-13 20:48:23,493] ERROR _log() L96   Error on request:
-Traceback (most recent call last):
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 897, in run_command
-    app = info.load_app()
-          ^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 312, in load_app
-    app = locate_app(import_name, None, raise_if_not_found=False)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 223, in locate_app
-    raise NoAppException(
-flask.cli.NoAppException: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 218, in locate_app
-    __import__(module_name)
-  File "/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/app.py", line 9, in <module>
-    from schemas import *
-  File "/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/schemas/__init__.py", line 1, in <module>
-    from schemas.paciente_schema import PacienteSchema,  PacienteBuscaSchema, PacienteViewSchema, PacienteDelSchema, \
-ImportError: cannot import name 'predict_diabetes' from 'schemas.paciente_schema' (/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/schemas/paciente_schema.py) - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
-[2023-11-13 20:48:25,341] INFO _log() L96   127.0.0.1 - - [13/Nov/2023 20:48:25] "[35m[1mGET /pacientes HTTP/1.1[0m" 500 - - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:30,703] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:30] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:30,910] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:30,911] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:30] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:31,118] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:31,118] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:31] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:31,345] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:31,345] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:31] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:31,633] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:31,633] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:31] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:31,855] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:31,856] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:31] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:32,035] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:32,036] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:32] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:32,239] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:32,240] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:32] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:32,447] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:32,448] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:32] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:32,656] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:32,657] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:32] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:32,888] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:32,888] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:32] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:33,163] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:33,164] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:33] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:33,379] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:33,380] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:33] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:33,684] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:33,684] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:33] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:33,801] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:33,802] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:33] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:33,987] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:33,988] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:33] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:34,155] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:34,156] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:34] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:34,265] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:34,266] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:34] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:34,404] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  
+[2023-12-04 20:58:34,405] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 20:58:34] "[33mGET /pacientes HTTP/1.1[0m" 404 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 20:58:34,492] WARNING get_pacientes() L50   Não há pacientes cadastrados na base :/ - call_trace=/Users/lc.romao/Library/CloudStorage/GoogleDrive-lc.romao98@gmail.com/My Drive/Doutorado/Teaching/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/exemplo_mvp/api/app.py L50  

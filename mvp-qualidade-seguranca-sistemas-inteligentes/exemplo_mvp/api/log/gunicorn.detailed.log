@@ -1,63 +1,48 @@
-[2023-11-13 20:52:46,523] ERROR _log() L96   Error on request:
-Traceback (most recent call last):
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
-    execute(self.server.app)
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
-    application_iter = app(environ, start_response)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 906, in app
-    raise err from None
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 897, in run_command
-    app = info.load_app()
-          ^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 312, in load_app
-    app = locate_app(import_name, None, raise_if_not_found=False)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 223, in locate_app
-    raise NoAppException(
-flask.cli.NoAppException: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/miniconda3/lib/python3.11/site-packages/flask/cli.py", line 218, in locate_app
-    __import__(module_name)
-  File "/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/app.py", line 9, in <module>
-    from schemas import *
-  File "/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/schemas/__init__.py", line 1, in <module>
-    from schemas.paciente_schema import PacienteSchema,  PacienteBuscaSchema, PacienteViewSchema, PacienteDelSchema, \
-ImportError: cannot import name 'predict_diabetes' from 'schemas.paciente_schema' (/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/schemas/paciente_schema.py) - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
-[2023-11-13 20:53:34,353] INFO _log() L96    * Detected change in '/mnt/g/My Drive/Doutorado/Teaching/SoftEng4IntSysPos/exemplo_mvp/api/schemas/paciente_schema.py', reloading - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:04:37,994] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:04:37] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:04:38,007] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:04:38] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:04:44,026] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:04:44] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:04:57,100] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:04:57] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:04:59,474] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:04:59] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:04:59,661] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:04:59] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:04:59,865] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:04:59] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:00,072] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:00] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:00,274] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:00] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:00,507] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:00] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:00,777] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:00] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:00,977] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:00] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:01,182] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:01] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:01,383] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:01] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:01,592] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:01] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:01,793] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:01] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:01,993] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:01] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:02,202] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:02] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:02,413] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:02] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:02,614] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:02] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:02,821] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:02] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:03,033] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:03] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:03,268] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:03] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:03,544] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:03] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:03,750] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:03] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:03,965] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:03] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:04,167] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:04] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:04,385] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:04] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:04,593] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:04] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:04,793] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:04] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:04,998] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:04] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:05,209] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:05] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:05,408] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:05] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:05,610] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:05] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:05,821] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:05] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:06,017] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:06] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:06,220] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:06] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:06,431] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:06] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:06,635] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:06] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:06,845] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:06] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:07,046] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:07] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:07,244] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:07] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:07,463] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:07] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:07,664] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:07] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-04 21:05:07,867] INFO _log() L96   127.0.0.1 - - [04/Dec/2023 21:05:07] "GET /pacientes HTTP/1.1" 200 - - call_trace=/Users/lc.romao/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-20 16:14:53,742] INFO _log() L96   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
+[2023-12-20 16:14:54,304] INFO _log() L96   [33mPress CTRL+C to quit[0m - call_trace=/home/ubuntu/miniconda3/lib/python3.11/site-packages/werkzeug/_internal.py L96  
