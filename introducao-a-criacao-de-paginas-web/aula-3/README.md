@@ -14,6 +14,8 @@ Conteúdo
   * [evento-inline.html](./exemplos/evento-inline.html): Exemplo de tratamento de evento in-line
   * [evento-Javascript.js](./exemplos/evento-Javascript.js): Exemplo de tratamento de evento separando HTML e JavaScript
 * [__meu-site__](./meu-site): Jogo completo Whac-A-Mole, agora com CSS e Javascript
+* [__Exercícios__](./Exercícios/README.md): Exercícios de JavaScript.
+* [__Estudos Dirigidos__](./estudosDirigidos/README.md): Desvio e repetição
 
 Outros links que podem ser interessantes:
 * [Aula 1](../aula-1): Nossa primeira aula

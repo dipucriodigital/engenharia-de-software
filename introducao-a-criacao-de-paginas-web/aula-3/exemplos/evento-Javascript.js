@@ -1,12 +1,7 @@
-
-
-
 document.getElementById("idyButton").addEventListener("click", minhaFuncao);
   
 function minhaFuncao() {
-
 }
-
 
 document.getElementById("idButton").onclick = function() {
     alert("O botão foi clicado!");

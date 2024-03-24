@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let peso = 70;
+        let altura = 1.70;
+        
+        var imc = peso / (altura * altura);
+
+        if (imc < 18.5) {
+            console.log("Abaixo do peso");
+        } else if (imc >= 18.5 && imc < 25) {
+            console.log("Peso normal");
+        } else if (imc >= 25 && imc < 30) {
+            console.log("Sobrepeso");
+        } else {
+            console.log("Obesidade");
+        }
+    </script>
+</head>
+<body>
+    <p>Digite Ctrl+Shift+I e clique na aba console.</p>    
+</body>
+</html>
