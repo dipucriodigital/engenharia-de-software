@@ -7,8 +7,8 @@
    2. [Operadores lógicos](#Operadores-Lógicos)
 1. [Desvio condicional](#Desvio-Condicional)
 1. Repetição determinada e indeterminada
-    1. Repetição indeterminada
-    2. Repetição determinada
+    1. [Repetição indeterminada](#Repetição-Indeterminada)
+    2. [Repetição determinada](#Repetição-Determinada)
 
 ### Operadores Relacionais
 
@@ -78,7 +78,7 @@ A tabela verdade a seguir resume as possibilidades entre duas expressões boolea
 |  true  |  false |  false   |
 |  true  |  true  |  true    |
 
-__OU lógico (OR)__: Representado pelo operador `||`. Este operador retorna verdadeiro (true) se pelo menos uma das expressões booleanas à sua esquerda ou à sua direita for verdadeira.
+__OU lógico (OR)__: Representado pelo operador `||`. Este operador retorna verdadeiro (true) se pelo menos uma das expressões booleanas, à sua esquerda ou à sua direita, for verdadeira.
 A tabela verdade a seguir resume as possibilidades entre duas expressões booleanas.
 
 |  exp1  |  exp2  | exp1 \|\| exp2 |
@@ -89,9 +89,9 @@ A tabela verdade a seguir resume as possibilidades entre duas expressões boolea
 |  true  |  true  |  true    |
 
 __Negação lógica (NOT)__: Representado pelo operador `!`. Este operador inverte o valor de uma expressão booleana. Se a expressão original for verdadeira, a negação será falsa, e vice-versa.
-A tabela verdade a seguir resume as possibilidades de uma expressão booleanas.
+A tabela verdade a seguir resume as possibilidades de uma expressão booleana.
 
-|  exp | !exp |
+|  exp | ! exp |
 | :----: |  :----:  |
 |  false |   true    |
 |  true  |   false    |
@@ -101,16 +101,16 @@ Usaremos em breve esses operadores em condições de controle de fluxo, como ins
 ### Desvio Condicional
 
 O desvio condicional em JavaScript é realizado por meio de instruções `if` e `else`.
-E JavaScript, você pode implementar desvios condicionais usando a instrução if, que permite executar blocos de código com base em uma condição especificada.
+Em JavaScript, você pode implementar desvios condicionais usando a instrução `if`, que permite executar blocos de código com base em uma condição especificada.
 A instrução `if` verifica se uma condição é verdadeira e, se for, executa um bloco de código. Se a condição for falsa, o bloco de código é ignorado.
 
 ```Javascript
-if (condição) {
+if(condição) {
     // Código a ser executado se a condição for verdadeira
 }
 ```
 
-> Observação: Um bloco de código é escrito entre `{` e `}`. Geralmente deslocamos um pouco para a direit o código escrito dentro do bloco. 
+> Observação: Um bloco de código é escrito entre `{` e `}`. Geralmente deslocamos um pouco para a direita o código escrito dentro do bloco. 
 
 Exemplo simples de como usar a instrução `if`. 
 Neste exemplo, o programa irá emitir uma mensagem informando o que fazer se a nota de um aluno estiver baixa.
@@ -125,8 +125,10 @@ if(nota < 5) {
 Opcionalmente podemos informar um bloco de comandos para ser executado caso a condição seja `falsa`.
 
 ```Javascript
-if (condição) {
+if(condição) {
     // Código a ser executado se a condição for verdadeira
+} else {
+    // Código a ser executado se a condição for falsa
 }
 ```
 
@@ -134,7 +136,7 @@ Exemplo simples de como usar a instrução `if` com `else`.
 Neste exemplo, o programa irá informar se uma pessoa é maior de idade ou não.
 
 ```Javascript
-if (idade >= 18) {
+if(idade >= 18) {
     console.log("Maior de idade");
 } else {
     console.log("Menor de idade");
@@ -147,13 +149,13 @@ Exemplo simples de como usar a instrução `if` com `else if` e `else`.
 Neste exemplo, o programa irá converter a nota numérica de um aluno para uma classificação por letra.
 
 ```Javascript
-if (nota >= 90) {
+if(nota >= 90) {
     console.log("A");
-} else if (nota >= 80) {
+} else if(nota >= 80) {
     console.log("B");
-} else if (nota >= 70) {
+} else if(nota >= 70) {
     console.log("C");
-} else if (nota >= 60) {
+} else if(nota >= 60) {
     console.log("D");
 } else {
     console.log("F");
@@ -171,7 +173,9 @@ __Agora é sua vez.__
 1. Em um script JavaScript, crie uma variável chamada `peso` representando o peso de uma pessoa. Crie uma outra variável chamada `altura` representando a altura dessa pessoa. Com base nessas variáveis, informe se a pessoa está abaixo do peso, com peso normal, sobrepeso ou com obsidade basedo no IMC.
 O IMC pode ser calculador pela seguinte fórmula:
 
-   var imc = peso / (altura * altura)
+   ```Javascript 
+   var imc = peso / (altura * altura);
+   ```
 
    Use a seguinte tabela no seu programa:
 
@@ -190,4 +194,103 @@ O IMC pode ser calculador pela seguinte fórmula:
 1. Em um script Javascript, crie três variáveis representando os tamanho s dos lados de um triângulo. Infome se o triangulo formado é isósceles (três lados iguais), equilátero (dois lados iguais) ou escaleno. 
 
    __Desafio__: informe se os lados não formam um triângulo. Para formar um triângulo, a soma de dois lados tem que ser maior que o terceiro lado, para todos os lados!
-[[Sugestão de solução](soluções/solução1.html)]
+[[Sugestão de solução](soluções/if-solução5.html)]
+
+### Repetição Indeterminada
+
+A repetição indeterminada é um tipo de loop que executa um bloco de código até que uma condição específica seja satisfeita. Em JavaScript, existem duas estruturas de repetição indeterminada.
+
+(1) `while`: Executa o bloco de código enquanto a condição for verdadeira. A condição é testada antes do bloco ser executado.
+
+```Javascript
+    while(condição) {
+        // Bloco de comandos a ser repetido
+    }
+```
+
+Normalmente quando criamos uma repetição utilizando o comando `while`, executamos três atividades:
+1. Antes do comando `while`, preparação das variáveis de controle.
+2. No comando `while`, condição de permanência no loop
+3. Geralmente no final do bloco do comando `while`, atualização das variáveis de controle do loop.
+
+O comando `while` também pode ser utilizado para criarmos repetições determinadas (embora seja mais fácil fazer com o comando `for` que veremos daqui a pouco).
+
+```Javascript
+var i = 0;
+
+while (i < 10) {
+  console.log(i);
+  i++;
+}
+```
+
+(2) `do-while`: Executa o bloco de código pelo menos uma vez e depois repete enquanto a condição for verdadeira. Com esse comando, podemos garantir que o bloco vai ser executado pelo menos uma vez porque primeiro o bloco é executado depois a condição é analisada.
+
+```Javascript
+    do {
+        // bloco de comandos a ser repetido
+    } while(condição);
+```
+
+[Exemplo](./do-while.html) de uso do comando `do-while`:
+
+```Javascript
+    do {
+        joga_whac_a_mole();
+        var resposta = confirm("Deseja jogar novamente?");
+    } while(resposta);
+```
+
+> Observação: O valor retornado pela função `confirm` é um valor booleano, ou seja, `true` ou `false`.
+
+### Repetição Determinada
+
+A repetição determinada é um tipo de loop que executa um bloco de código um número pré-definido de vezes. Em JavaScript, a estrutura de repetição mais comum para isso é o comando `for`.
+Esse tipo de repetição é útil quando sabemos antecipadamente quantas vezes queremos executar um bloco de código.
+
+```Javascript
+for(inicialização; condição; atualização) {
+    // Bloco de código a ser executado
+}
+```
+
+O comando for é composto por três partes:
+1) __inicialização__: Executada uma (única) vez no início do loop, geralmente utilizada para inicializar as variáveis que irão controlar o loop.
+1) __condição__: Condição de permanência no loop. O bloco de comandos associado ao for será executado enquanto a condição for verdadeira. A condição é analisada antes do bloco começar a ser executado.
+1) __atualização__: Executada após o bloco de comandos a cada iteração do loop. Geralmente é utilizada para atualizar as variáveis de controle.
+
+Exemplo: O código a seguir executa o bloco de comandos 5 vezes, escrevendo números de 0 (zero) até 4 (quatro). O valor 5 (cinco) nunca será escrito porque quando a variável `i` atingir esse valor, o resultado da expressão de condição será falso e o loop terminará.
+
+```Javascript
+for(var i=0; i<5; i++) {
+  console.log(i);
+}
+```
+
+__Agora é sua vez.__
+
+1. Faça um script para exibir os 10 primeiros números não negativos.
+[[Sugestão de solução](soluções/loop-solução1.html)]
+
+1. Faça um script para exibir os números de 1 até 10.
+[[Sugestão de solução](soluções/loop-solução2.html)]
+
+1. Faça um script para exibir os 10 primeiros números ímpares.
+[[Sugestão de solução](soluções/loop-solução3.html)]
+
+1. Faça um script para exibir a tabuada do número 5.
+[[Sugestão de solução](soluções/loop-solução4.html)]
+
+1. Faça um script para exibir toda a tabuada (de todos os números).
+[[Sugestão de solução](soluções/loop-solução5.html)]
+
+1. __Desafio__: Faça um script que exiba a soma de números informados pelo usuário. A leitura dos números termina quando o usuário digitar um valor negativo. Para realizar a leitura use a função prompt e a função parseFloat como mostrado a seguir.
+
+    ```Javascript
+    var numero = parseFloat(prompt("Digite um número:"));
+    ```
+   > Observações:<br>
+   > * A função `prompt` envia uma pergunta para o usuário e espera que ele digite uma resposta. A resposta é retornar em formato de texto, mesmo que seja composta apenas por números. Nesse caso será um texto numérico.<br>
+   > * A função `parseFloat` converte o seu argumento para número real. Nesse caso, o texto retornado pela função `prompt` será convertido para número real.
+
+   [[Sugestão de solução](soluções/loop-solução6.html)]
