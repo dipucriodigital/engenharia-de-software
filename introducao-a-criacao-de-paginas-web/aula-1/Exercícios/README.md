@@ -18,9 +18,5 @@ Exiba os dados em formato de uma tabela semelhante a da figura a seguir ([Micesc
 A tabela original está no seguinte [link](https://www.researchgate.net/figure/The-relevant-data-on-the-planets-from-our-Solar-system_tbl2_268419560). Inclua na página um título, algum texto e um link para a fonte original da tabela.
 [[Sugestão de solução](soluções/solução4.html)]
 <br><br>
+
    ![Exemplo de tabela com dados](../../imagens/The-relevant-data-on-the-planets-from-our-Solar-system.png)
-
-__DESAFIO__
-
-Reimplemente o nosso jogo Whac-A-Mole usando apenas uma página HTML.
-[[Sugestão de solução](soluções/solução5.html)]
