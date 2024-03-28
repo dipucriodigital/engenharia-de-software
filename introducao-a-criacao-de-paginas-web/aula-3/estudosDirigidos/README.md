@@ -294,3 +294,5 @@ __Agora é sua vez.__
    > * A função `parseFloat` converte o seu argumento para número real. Nesse caso, o texto retornado pela função `prompt` será convertido para número real.
 
    [[Sugestão de solução](soluções/loop-solução6.html)]
+
+Terminou? Então ao trabalho! Vamos fazer os [exercícios da Aula 3](../Exercícios/README.md).
