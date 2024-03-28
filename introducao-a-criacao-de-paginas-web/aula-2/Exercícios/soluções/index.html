@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whac-a-Mole</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/javascript.js"></script>
+    <!-- Google fonts: https://fonts.google.com/?query=medieval -->
+    <!-- Google fonts: https://fonts.google.com/specimen/Raleway+Dots?query=dot -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=MedievalSharp&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Página inicial -->
+    <header class="header" id="header">
+        <img src="images/Whac-A-Mole.jpg" alt="Imagem do jogo físico">
+        <div class="nextPage">
+            <a href="#regras" class="circulo">
+                <img src="images/arrow-down.png" alt="seta para baixo" class="arrow">
+            </a>
+        </div>
+    </header>
+
+    <!-- Regras do jogo -->
+    <section class="regras" id="regras">
+        <div class="previousPage">
+            <a href="#header" class="circulo">
+                <img src="images/arrow-up.png" alt="set para cima" class="arrow">
+            </a>
+        </div>
+        <div class="contentBox">
+            <h2 class="heading">Regras do Jogo</h2>
+            <p class="text">
+                Lorem ipsum dolor, 
+                sit amet consectetur adipisicing elit. 
+                Beatae obcaecati iure assumenda saepe aut laudantium iusto inventore suscipit qui necessitatibus hic neque, 
+                asperiores nulla sunt. 
+                Quod quo modi laborum saepe.
+            </p>
+            <p class="text">
+                Lorem ipsum dolor sit, 
+                amet consectetur adipisicing elit. 
+                Repellat, 
+                aliquid. 
+                Facere adipisci a quas, 
+                expedita quod id repudiandae, 
+                deserunt perspiciatis ea aperiam ipsam consectetur nam enim perferendis. 
+                Quidem, omnis aperiam.
+            </p>
+        </div>
+        <div class="imgBox"></div>
+        <div class="nextPage">
+            <a href="#tabuleiro" class="circulo">
+                <img src="images/arrow-down.png" alt="seta para baixo" class="arrow">
+            </a>
+        </div>
+    </section>
+
+    <!-- O jogo -->
+    <section class="tabuleiro" id="tabuleiro">
+        <div class="previousPage">
+            <a href="#regras" class="circulo">
+                <img src="images/arrow-up.png" alt="set para cima" class="arrow">
+            </a>
+        </div>
+        <div class="mesa" id="idMesa">
+            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco0">
+            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco1">
+            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco2">
+            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco3">
+            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco4">
+        </div>
+        <div class="pontos">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Pontuação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acertos:</td>
+                        <td class="pontuacao" id="acertos"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Perdidos:</td>
+                        <td class="pontuacao" id="perdidos"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Errados:</td>
+                        <td class="pontuacao" id="errados"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Saldo:</td>
+                        <td class="pontuacao" id="saldo"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button id="start" class="btn btn-light">Start</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="nextPage">
+            <a href="#records" class="circulo">
+                <img src="images/arrow-down.png" alt="seta para baixo" class="arrow">
+            </a>
+        </div>
+    </section>
+
+    <!-- Galeria de records -->
+    <section class="records" id="records">
+        <div class="previousPage">
+            <a href="#tabuleiro" class="circulo">
+                <img src="images/arrow-up.png" alt="set para cima" class="arrow">
+            </a>
+        </div>
+        <div class="contentBox">
+            <h2 class="heading">Records - Top 10</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Colocação</th>
+                        <th>Nome</th>
+                        <th>Pontos</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Asterix</td>
+                        <td>512</td>
+                        <td>20/07/2019</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Obelix</td>
+                        <td>256</td>
+                        <td>01/01/2002</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Panoramix</td>
+                        <td>128</td>
+                        <td>25/06/2009</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Falbala</td>
+                        <td>64</td>
+                        <td>02/04/2005</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Chatotorix</td>
+                        <td>32</td>
+                        <td>12/07/2010</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Ideiafix</td>
+                        <td>16</td>
+                        <td>12/11/2014</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Veteranix</td>
+                        <td>8</td>
+                        <td>12/11/2019</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Naftalina</td>
+                        <td>4</td>
+                        <td>25/07/2018</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Automatix</td>
+                        <td>2</td>
+                        <td>04/02/2004</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Ielosubmarina</td>
+                        <td>1</td>
+                        <td>28/07/2019</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

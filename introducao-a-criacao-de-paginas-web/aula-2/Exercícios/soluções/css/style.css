@@ -1,0 +1,269 @@
+body {
+    margin: 0px;
+}
+
+/* 
+estilos globais 
+*/
+.circulo {
+    background-color: #CCCCCC; /* Cor de fundo do círculo */
+    border-radius: 50%; /* Torna o contêiner um círculo */
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextPage {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    justify-content: center;    /* centraliza na horizontal */
+    align-items: center;    /* centraliza na vertical, precisa de display flex */
+    display: flex;          /* centraliza na vertical */
+    z-index: 3;
+}
+
+.nextPage a {
+    text-decoration: none;
+}
+
+.arrow {
+    margin: 10px;
+    width: 24px !important; /* !important informa que essa regra deve prevalecer sobre outras regras que mudem essa propriedade */
+    height: 24px !important;
+    z-index: 4;
+}
+
+.previousPage {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    justify-content: center;    /* centraliza na horizontal */
+    align-items: center;    /* centraliza na vertical, precisa de display flex */
+    display: flex;          /* centraliza na vertical */
+    z-index: 3;
+}
+.previousPage a {
+    text-decoration: none;
+}
+
+/* 
+Header 
+*/
+.header {
+    height: 100vh;
+    padding: 0;
+}
+
+.header img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*
+Regras
+*/
+.regras {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #D0D0D0;
+}
+
+.regras .contentBox,
+.regras .imgBox {
+    width: 100%;
+    padding: 50px;
+    min-height: 400px;
+    text-align: left;
+    background-color: #C0C0C0;
+}
+
+.regras .imgBox {
+    background: url(../images/Mole.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;          /* centraliza na vertical */
+    justify-content: center;
+    align-items: center;    /* centraliza na vertical, precisa de display flex */
+}
+
+/*
+Tabuleiro
+*/
+.tabuleiro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00FF00;
+}
+
+.mesa {
+    width: 536px;
+    height: 536px;
+    z-index: 2;
+    background-color: #008000;
+    justify-content: space-around;    /* centraliza na horizontal, precisa de display flex */
+    align-items: center;        /* centraliza verticalmente */
+    display: flex;  /* centraliza, precisa de justify-content center */
+    flex-wrap: wrap;
+    text-align: center;
+    cursor: url(../images/hammer.png), crosshair;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.mesa img {
+    padding: 25px 50px 25px 50px;
+    box-sizing: content-box;    /* incluído por causa do bootstrap: A propriedade CSS box-sizing determina como o modelo de caixa de um elemento é calculado, especialmente em relação às propriedades width e height. Ela tem dois valores principais: content-box e border-box. */
+    width: 76px;
+    height: 61px;
+}
+
+.pontos {
+    width: 536px;
+    height: 536px;
+    justify-content: center;    /* centraliza na horizontal dentro de um container flex */
+    display: flex;  /* torna o contairner flex */
+    background: linear-gradient(45deg, #80FF80 25%, transparent 25%, transparent 75%, #80FF80 75%, #80FF80), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+    background-size: 20px 20px;
+}
+
+.pontos th {
+    font-size: 50px;
+    font-family: 'Bungee Spice', sans-serif;
+    text-align: center;
+}
+
+.pontos td:first-child {
+    text-align: right;
+    font-size: 36px;
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+.pontuacao {
+    font-family: 'Raleway Dots', sans-serif;
+}
+
+#start {
+    width: 100%;
+    font-size: 36px;
+    border: 1px solid #000000;
+}
+
+/*
+Recordes
+*/
+.records {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.records table {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-collapse: collapse;
+    font-family: 'MedievalSharp', cursive;
+}
+
+.records tr th {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #FFFFFF;
+    background-color: #000000;
+    text-align: center;
+}
+
+.records tr {
+    font-size: 36px;
+}
+
+.records td {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 30px;
+}
+
+.records tr:nth-child(even) {
+    background-color: #C0C0C0;
+}
+
+.records tr td:first-child, td:nth-child(3) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+@media(max-width: 991px) {
+    .regras {
+        flex-direction: column;
+    }
+
+    .regras .imgBox {
+        background-size: contain;
+    }
+
+    .tabuleiro {
+        flex-direction: column-reverse;
+    }
+    
+    .pontos th {
+        font-size: 30px;
+    }
+
+    .pontos td:first-child {
+        font-size: 20px;
+    }
+
+
+    .mesa {
+        width: 400px;
+        height: 400px;
+    }
+
+    .pontos {
+        width: 400px;
+        height: 400px;
+    }    
+    .mesa img {
+        padding: 10px 30px 10px 30px;
+    }
+    
+    .records tr th {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #FFFFFF;
+        background-color: #000000;
+        text-align: center;
+    }
+    
+    .records tr {
+        font-size: 18px;
+    }
+    
+    .records td {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 15px;
+    }
+}

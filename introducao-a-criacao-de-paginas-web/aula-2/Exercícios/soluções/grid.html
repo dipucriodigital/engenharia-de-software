@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid com DIV</title>
+    <style>
+        .tabela {
+            width: 500px;
+            margin: 0;
+        }
+
+        .linha {
+            background: #0000FF;
+        }
+
+        .celula {
+            border-style: solid;
+            border-width: 2px;
+            width: 50px;
+            float: left;
+        }
+
+        .divisor {
+            clear: both;
+            background: #F0000F;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Grid 3 linhas x 4 colunas</p>
+    <div class='tabela'>
+        <div class='linha'>
+            <div class='celula'>1,1</div>
+            <div class='celula'>1,2</div>
+            <div class='celula'>1,3</div>
+            <div class='celula'>1,4</div>
+        </div>
+        <div class='divisor'></div>
+        <div class='linha'>
+            <div class='celula'>2,1</div>
+            <div class='celula'>2,2</div>
+            <div class='celula'>2,3</div>
+            <div class='celula'>2,4</div>
+        </div>
+        <div class='divisor'></div>
+        <div class='linha'>
+            <div class='celula'>3,1</div>
+            <div class='celula'>3,2</div>
+            <div class='celula'>3,3</div>
+            <div class='celula'>3,4</div>
+        </div>
+    </div>
+</body>
+</html>

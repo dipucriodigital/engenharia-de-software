@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas estilizadas</title>
+    <style>
+        ul {
+            list-style-type: none;  /* Remove os marcadores padrão da lista */
+            padding: 0;             /* Remove o preenchimento padrão da lista */
+        }
+
+        ul li {
+            margin-bottom: 10px;    /* Adiciona espaçamento entre os itens */
+            padding-left: 30px;     /* Adiciona um recuo à esquerda para os marcadores personalizados */
+            position: relative;     /* Permite posicionar os marcadores personalizados */
+        }
+
+        ul li::before {
+            content: "==>";     /* Define o marcador personalizado */
+            position: absolute; /* Posiciona o marcador */
+            left: 0;            /* Alinha o marcador com a borda esquerda do item */
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <!-- Adicione mais itens, se necessário -->
+    </ul>
+</body>
+</html>
