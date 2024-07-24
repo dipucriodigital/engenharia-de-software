@@ -12,3 +12,5 @@ pandas
 scikit-learn
 numpy
 pytest
+jupyter
+matplotlib
