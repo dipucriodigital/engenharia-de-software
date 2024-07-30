@@ -1,4 +1,5 @@
 from sklearn.model_selection import train_test_split
+import pickle
 
 class PreProcessador:
 
@@ -25,3 +26,10 @@ class PreProcessador:
         X = dados[:, 0:-1]
         Y = dados[:, -1]
         return train_test_split(X, Y, test_size=percentual_teste, random_state=seed)
+    
+    def scaler(X_train):
+        """ Normaliza os dados. """
+        # normalização/padronização
+        scaler = pickle.load(open('./MachineLearning/scalers/minmax_scaler_diabetes.pkl', 'rb'))
+        reescaled_X_train = scaler.transform(X_train)
+        return reescaled_X_train

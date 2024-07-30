@@ -33,10 +33,8 @@ def home():
          responses={"200": PacienteViewSchema, "404": ErrorSchema})
 def get_pacientes():
     """Lista todos os pacientes cadastrados na base
-    Retorna uma lista de pacientes cadastrados na base.
-    
     Args:
-        nome (str): nome do paciente
+       none
         
     Returns:
         list: lista de pacientes cadastrados na base
@@ -77,7 +75,7 @@ def predict(form: PacienteSchema):
     """
     
     # Carregando modelo
-    ml_path = 'ml_model/diabetes_lr.pkl'
+    ml_path = './MachineLearning/models/rf_diabetes_classifier.pkl'
     modelo = Model.carrega_modelo(ml_path)
     
     paciente = Paciente(

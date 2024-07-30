@@ -1,6 +1,7 @@
 import numpy as np
 import pickle
 import joblib
+from model.preprocessador import PreProcessador
 
 class Model:
     
@@ -29,5 +30,7 @@ class Model:
                             form.age
                         ])
         # Faremos o reshape para que o modelo entenda que estamos passando
-        diagnosis = model.predict(X_input.reshape(1, -1))
+        X_input = X_input.reshape(1, -1)
+        reescaled_X_input = PreProcessador.scaler(X_train=X_input)
+        diagnosis = model.predict(reescaled_X_input)
         return int(diagnosis[0])

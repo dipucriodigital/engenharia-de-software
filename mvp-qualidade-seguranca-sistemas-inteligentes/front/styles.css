@@ -40,6 +40,8 @@ header {
     padding: 30px 40px;
     color: white;
     display: flex;
+    flex-wrap:wrap;
+    gap:5px;
     justify-content: center;
 }
 
@@ -70,6 +72,7 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
