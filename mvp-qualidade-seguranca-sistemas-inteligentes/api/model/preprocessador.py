@@ -1,9 +1,10 @@
 from sklearn.model_selection import train_test_split
 import pickle
+import numpy as np
 
 class PreProcessador:
 
-    def pre_processar(self, dataset, percentual_teste, seed=7):
+    def separa_teste_treino(self, dataset, percentual_teste, seed=7):
         """ Cuida de todo o pré-processamento. """
         # limpeza dos dados e eliminação de outliers
 
@@ -26,6 +27,21 @@ class PreProcessador:
         X = dados[:, 0:-1]
         Y = dados[:, -1]
         return train_test_split(X, Y, test_size=percentual_teste, random_state=seed)
+    
+    def preparar_form(form):
+        """ Prepara os dados recebidos do front para serem usados no modelo. """
+        X_input = np.array([form.preg, 
+                            form.plas, 
+                            form.pres, 
+                            form.skin, 
+                            form.test, 
+                            form.mass, 
+                            form.pedi, 
+                            form.age
+                        ])
+        # Faremos o reshape para que o modelo entenda que estamos passando
+        X_input = X_input.reshape(1, -1)
+        return X_input
     
     def scaler(X_train):
         """ Normaliza os dados. """

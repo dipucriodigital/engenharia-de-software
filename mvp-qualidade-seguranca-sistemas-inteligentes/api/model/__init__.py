@@ -7,6 +7,8 @@ import os
 from model.base import Base
 from model.paciente import Paciente
 from model.modelo import Model
+from model.pipeline import Pipeline
+from model.preprocessador import PreProcessador
 
 db_path = "database/"
 # Verifica se o diretorio não existe

@@ -4,7 +4,7 @@ from urllib.parse import unquote
 
 from sqlalchemy.exc import IntegrityError
 
-from model import Session, Paciente, Model
+from model import *
 from logger import logger
 from schemas import *
 from flask_cors import CORS
@@ -73,22 +73,38 @@ def predict(form: PacienteSchema):
     Returns:
         dict: representação do paciente e diagnóstico associado
     """
+
+    # Recuperando os dados do formulário
+    name = form.name.strip()
+    preg = form.preg
+    plas = form.plas
+    pres = form.pres
+    skin = form.skin
+    test = form.test
+    mass = form.mass
+    pedi = form.pedi
+    age = form.age
     
+    # Preparando os dados para o modelo
+    X_input = PreProcessador.preparar_form(form)
     # Carregando modelo
-    ml_path = './MachineLearning/models/rf_diabetes_classifier.pkl'
-    modelo = Model.carrega_modelo(ml_path)
+    model_path = './MachineLearning/pipelines/rf_diabetes_pipeline.pkl'
+    # modelo = Model.carrega_modelo(ml_path)
+    modelo = Pipeline.carrega_pipeline(model_path)
+    # Realizando a predição
+    outcome = Model.preditor(modelo, X_input)
     
     paciente = Paciente(
-        name=form.name.strip(),
-        preg=form.preg,
-        plas=form.plas,
-        pres=form.pres,
-        skin=form.skin,
-        test=form.test,
-        mass=form.mass,
-        pedi=form.pedi,
-        age=form.age,
-        outcome=Model.preditor(modelo, form)
+        name=name,
+        preg=preg,
+        plas=plas,
+        pres=pres,
+        skin=skin,
+        test=test,
+        mass=mass,
+        pedi=pedi,
+        age=age,
+        outcome=outcome
     )
     logger.debug(f"Adicionando produto de nome: '{paciente.name}'")
     
