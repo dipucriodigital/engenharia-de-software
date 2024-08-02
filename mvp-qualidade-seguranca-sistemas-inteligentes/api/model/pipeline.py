@@ -7,9 +7,6 @@ class Pipeline:
         """Carregamos o pipeline construindo durante a fase de treinamento
         """
         
-        if path.endswith('.pkl'):
-            with open(path, 'rb') as file:
-                pipeline = pickle.load(file)
-        else:
-            raise Exception('Formato de arquivo não suportado')
+        with open(path, 'rb') as file:
+             pipeline = pickle.load(file)
         return pipeline

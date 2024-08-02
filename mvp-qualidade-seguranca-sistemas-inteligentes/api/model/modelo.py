@@ -19,4 +19,4 @@ class Model:
         """Realiza a predição de um paciente com base no modelo treinado
         """
         diagnosis = model.predict(X_input)
-        return int(diagnosis[0])
+        return diagnosis
