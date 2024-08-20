@@ -8,7 +8,7 @@ modelo = Model()
 avaliador = Avaliador()
 
 # Parâmetros    
-url_dados = "/Users/lucas/Developer/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/api/MachineLearning/data/test_dataset_diabetes.csv"
+url_dados = "./MachineLearning/data/test_dataset_diabetes.csv"
 colunas = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 
 # Carga dos dados
@@ -21,7 +21,7 @@ y = array[:,-1]
 # O nome do método a ser testado necessita começar com "test_"
 def test_modelo_lr():  
     # Importando o modelo de regressão logística
-    lr_path = '/Users/lucas/Developer/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/api/MachineLearning/models/diabetes_lr.pkl'
+    lr_path = './MachineLearning/models/diabetes_lr.pkl'
     modelo_lr = Model.carrega_modelo(lr_path)
 
     # Obtendo as métricas da Regressão Logística
@@ -37,7 +37,7 @@ def test_modelo_lr():
 # Método para testar modelo KNN a partir do arquivo correspondente
 def test_modelo_knn():
     # Importando modelo de KNN
-    knn_path = '/Users/lucas/Developer/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/api/MachineLearning/models/diabetes_knn.pkl'
+    knn_path = './MachineLearning/models/diabetes_knn.pkl'
     modelo_knn = Model.carrega_modelo(knn_path)
 
     # Obtendo as métricas do KNN
