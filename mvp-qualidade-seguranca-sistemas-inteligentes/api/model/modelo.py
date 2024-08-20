@@ -4,6 +4,9 @@ import joblib
 from model.preprocessador import PreProcessador
 class Model:
     
+    # TODO: Guardar model como atributo e o preditor receber as entradas.
+    # TODO: preditor -> realiza_predicao
+    
     def carrega_modelo(path):
         """Dependendo se o final for .pkl ou .joblib, carregamos de uma forma ou de outra
         """

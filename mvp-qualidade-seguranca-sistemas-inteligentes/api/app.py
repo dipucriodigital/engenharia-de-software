@@ -73,6 +73,7 @@ def predict(form: PacienteSchema):
     Returns:
         dict: representação do paciente e diagnóstico associado
     """
+    # TODO: Instanciar classes
 
     # Recuperando os dados do formulário
     name = form.name
