@@ -327,4 +327,9 @@ log/
 log/*.log
 log/*.log.*
 
+# Ignoring database folder
+db/
+database/
+*.sqlite3
+
 # End of https://www.toptal.com/developers/gitignore/api/python,macos,visualstudiocode,flask,jupyternotebooks

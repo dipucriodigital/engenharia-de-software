@@ -75,7 +75,7 @@ def predict(form: PacienteSchema):
     """
 
     # Recuperando os dados do formulário
-    name = form.name.strip()
+    name = form.name
     preg = form.preg
     plas = form.plas
     pres = form.pres
@@ -85,6 +85,8 @@ def predict(form: PacienteSchema):
     pedi = form.pedi
     age = form.age
     
+    print("\n", name, preg, plas, pres, skin, test, mass, pedi, age, "\n")  
+    
     # Preparando os dados para o modelo
     X_input = PreProcessador.preparar_form(form)
     # Carregando modelo
@@ -92,7 +94,7 @@ def predict(form: PacienteSchema):
     # modelo = Model.carrega_modelo(ml_path)
     modelo = Pipeline.carrega_pipeline(model_path)
     # Realizando a predição
-    outcome = Model.preditor(modelo, X_input)
+    outcome = int(Model.preditor(modelo, X_input)[0])
     
     paciente = Paciente(
         name=name,
@@ -196,3 +198,6 @@ def delete_paciente(query: PacienteBuscaSchema):
         session.commit()
         logger.debug(f"Deletado paciente #{paciente_nome}")
         return {"message": f"Paciente {paciente_nome} removido com sucesso!"}, 200
+    
+if __name__ == '__main__':
+    app.run(debug=True)
