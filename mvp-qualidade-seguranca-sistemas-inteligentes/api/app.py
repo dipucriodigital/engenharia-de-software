@@ -84,9 +84,7 @@ def predict(form: PacienteSchema):
     mass = form.mass
     pedi = form.pedi
     age = form.age
-    
-    print("\n", name, preg, plas, pres, skin, test, mass, pedi, age, "\n")  
-    
+        
     # Preparando os dados para o modelo
     X_input = PreProcessador.preparar_form(form)
     # Carregando modelo
