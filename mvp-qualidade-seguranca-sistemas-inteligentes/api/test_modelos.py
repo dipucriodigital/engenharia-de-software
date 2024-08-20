@@ -53,7 +53,7 @@ def test_modelo_knn():
 # Método para testar pipeline Random Forest a partir do arquivo correspondente
 def test_modelo_rf():
     # Importando pipeline de Random Forest
-    rf_path = '/Users/lucas/Developer/engenharia-de-software/mvp-qualidade-seguranca-sistemas-inteligentes/api/MachineLearning/pipelines/rf_diabetes_pipeline.pkl'
+    rf_path = './MachineLearning/pipelines/rf_diabetes_pipeline.pkl'
     modelo_rf = Pipeline.carrega_pipeline(rf_path)
 
     # Obtendo as métricas do Random Forest
