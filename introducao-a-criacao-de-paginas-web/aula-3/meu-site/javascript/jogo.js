@@ -86,8 +86,8 @@ function mostraPontuacao() {
 function mostraPontuacaoDe(display, valor) {
     // pega as imagens
     let objCentena = document.getElementById(display).firstChild;
-    let objDezena = centena.nextSibling;
-    let objUnidade = dezena.nextSibling;
+    let objDezena = objCentena.nextSibling;
+    let objUnidade = objDezena.nextSibling;
 
     // calcula o valor de cada algarismo
     let centena = parseInt(valor/100);
