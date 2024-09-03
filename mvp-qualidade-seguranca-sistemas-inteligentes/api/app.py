@@ -39,16 +39,18 @@ def get_pacientes():
     Returns:
         list: lista de pacientes cadastrados na base
     """
+    logger.debug("Coletando dados sobre todos os pacientes")
+    # Criando conexão com a base
     session = Session()
-    
     # Buscando todos os pacientes
     pacientes = session.query(Paciente).all()
     
     if not pacientes:
-        logger.warning("Não há pacientes cadastrados na base :/")
-        return {"message": "Não há pacientes cadastrados na base :/"}, 404
+        # Se não houver pacientes
+        return {"pacientes": []}, 200
     else:
         logger.debug(f"%d pacientes econtrados" % len(pacientes))
+        print(pacientes)
         return apresenta_pacientes(pacientes), 200
 
 
