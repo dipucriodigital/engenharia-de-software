@@ -126,7 +126,9 @@ const deleteItem = (item) => {
   Função para adicionar um novo item com nome, quantidade e valor 
   --------------------------------------------------------------------------------------
 */
-const newItem = async () => {
+const newItem = async (event) => {
+  event.preventDefault();
+
   let inputPatient = document.getElementById("newInput").value;
   let inputPreg = document.getElementById("newPreg").value;
   let inputPlas = document.getElementById("newPlas").value;

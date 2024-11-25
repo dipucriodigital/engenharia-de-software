@@ -3,7 +3,7 @@ Flask-Cors
 flask-openapi3
 Flask-SQLAlchemy
 nose2
-pydantic
+pydantic<2
 SQLAlchemy
 SQLAlchemy-Utils
 typing_extensions

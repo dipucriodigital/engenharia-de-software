@@ -61,19 +61,6 @@ def predict(form: PacienteSchema):
     """Adiciona um novo paciente à base de dados
     Retorna uma representação dos pacientes e diagnósticos associados.
     
-    Args:
-        name (str): nome do paciente
-        preg (int): número de vezes que engravidou: Pregnancies
-        plas (int): concentração de glicose no plasma: Glucose
-        pres (int): pressão diastólica (mm Hg): BloodPressure
-        skin (int): espessura da dobra cutânea do tríceps (mm): SkinThickness
-        test (int): insulina sérica de 2 horas (mu U/ml): Insulin
-        mass (float): índice de massa corporal (peso em kg/(altura em m)^2): BMI
-        pedi (float): função pedigree de diabetes: DiabetesPedigreeFunction
-        age (int): idade (anos): Age
-        
-    Returns:
-        dict: representação do paciente e diagnóstico associado
     """
     # TODO: Instanciar classes
 
