@@ -12,7 +12,7 @@ from flask_cors import CORS
 
 # Instanciando o objeto OpenAPI
 info = Info(title="Minha API", version="1.0.0")
-app = OpenAPI(__name__, info=info)
+app = OpenAPI(__name__, info=info, static_folder='../front', static_url_path='/front')
 CORS(app)
 
 # Definindo tags para agrupamento das rotas
@@ -20,9 +20,17 @@ home_tag = Tag(name="Documentação", description="Seleção de documentação: 
 paciente_tag = Tag(name="Paciente", description="Adição, visualização, remoção e predição de pacientes com Diabetes")
 
 
-# Rota home
+# Rota home - redireciona para o frontend
 @app.get('/', tags=[home_tag])
 def home():
+    """Redireciona para o index.html do frontend.
+    """
+    return redirect('/front/index.html')
+
+
+# Rota para documentação OpenAPI
+@app.get('/docs', tags=[home_tag])
+def docs():
     """Redireciona para /openapi, tela que permite a escolha do estilo de documentação.
     """
     return redirect('/openapi')
@@ -62,7 +70,9 @@ def predict(form: PacienteSchema):
     Retorna uma representação dos pacientes e diagnósticos associados.
     
     """
-    # TODO: Instanciar classes
+    # Instanciando classes
+    preprocessador = PreProcessador()
+    pipeline = Pipeline()
 
     # Recuperando os dados do formulário
     name = form.name
@@ -76,13 +86,12 @@ def predict(form: PacienteSchema):
     age = form.age
         
     # Preparando os dados para o modelo
-    X_input = PreProcessador.preparar_form(form)
+    X_input = preprocessador.preparar_form(form)
     # Carregando modelo
     model_path = './MachineLearning/pipelines/rf_diabetes_pipeline.pkl'
-    # modelo = Model.carrega_modelo(ml_path)
-    modelo = Pipeline.carrega_pipeline(model_path)
+    modelo = pipeline.carrega_pipeline(model_path)
     # Realizando a predição
-    outcome = int(Model.preditor(modelo, X_input)[0])
+    outcome = int(modelo.predict(X_input)[0])
     
     paciente = Paciente(
         name=name,

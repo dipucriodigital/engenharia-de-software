@@ -4,6 +4,10 @@ import numpy as np
 
 class PreProcessador:
 
+    def __init__(self):
+        """Inicializa o preprocessador"""
+        pass
+
     def separa_teste_treino(self, dataset, percentual_teste, seed=7):
         """ Cuida de todo o pré-processamento. """
         # limpeza dos dados e eliminação de outliers
@@ -28,7 +32,7 @@ class PreProcessador:
         Y = dados[:, -1]
         return train_test_split(X, Y, test_size=percentual_teste, random_state=seed)
     
-    def preparar_form(form):
+    def preparar_form(self, form):
         """ Prepara os dados recebidos do front para serem usados no modelo. """
         X_input = np.array([form.preg, 
                             form.plas, 
@@ -43,7 +47,7 @@ class PreProcessador:
         X_input = X_input.reshape(1, -1)
         return X_input
     
-    def scaler(X_train):
+    def scaler(self, X_train):
         """ Normaliza os dados. """
         # normalização/padronização
         scaler = pickle.load(open('./MachineLearning/scalers/minmax_scaler_diabetes.pkl', 'rb'))

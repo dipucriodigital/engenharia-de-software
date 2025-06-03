@@ -29,10 +29,36 @@ const getList = async () => {
 
 /*
   --------------------------------------------------------------------------------------
+  Função para limpar a tabela antes de recarregar os dados
+  --------------------------------------------------------------------------------------
+*/
+const clearTable = () => {
+  var table = document.getElementById('myTable');
+  // Remove todas as linhas exceto o cabeçalho (primeira linha)
+  while(table.rows.length > 1) {
+    table.deleteRow(1);
+  }
+}
+
+/*
+  --------------------------------------------------------------------------------------
+  Função para recarregar a lista completa do servidor
+  --------------------------------------------------------------------------------------
+*/
+const refreshList = async () => {
+  clearTable();
+  await getList();
+}
+
+/*
+  --------------------------------------------------------------------------------------
   Chamada da função para carregamento inicial dos dados
   --------------------------------------------------------------------------------------
 */
-getList()
+// Carrega a lista apenas uma vez quando a página é carregada
+document.addEventListener('DOMContentLoaded', function() {
+  getList();
+});
 
 
 
@@ -58,13 +84,17 @@ const postItem = async (inputPatient, inputPreg, inputPlas,
   formData.append('age', inputAge);
 
   let url = 'http://127.0.0.1:5000/paciente';
-  fetch(url, {
+  return fetch(url, {
     method: 'post',
     body: formData
   })
     .then((response) => response.json())
+    .then((data) => {
+      return data; // Retorna os dados do paciente com o diagnóstico
+    })
     .catch((error) => {
       console.error('Error:', error);
+      throw error;
     });
 }
 
@@ -145,7 +175,7 @@ const newItem = async (event) => {
     method: 'get'
   })
     .then((response) => response.json())
-    .then((data) => {
+    .then(async (data) => {
       if (data.pacientes && data.pacientes.some(item => item.name === inputPatient)) {
         alert("O paciente já está cadastrado.\nCadastre o paciente com um nome diferente ou atualize o existente.");
       } else if (inputPatient === '') {
@@ -153,13 +183,42 @@ const newItem = async (event) => {
       } else if (isNaN(inputPreg) || isNaN(inputPlas) || isNaN(inputPres) || isNaN(inputSkin) || isNaN(inputTest) || isNaN(inputMass) || isNaN(inputPedi) || isNaN(inputAge)) {
         alert("Esse(s) campo(s) precisam ser números!");
       } else {
-        insertList(inputPatient, inputPreg, inputPlas, inputPres, inputSkin, inputTest, inputMass, inputPedi, inputAge);
-        postItem(inputPatient, inputPreg, inputPlas, inputPres, inputSkin, inputTest, inputMass, inputPedi, inputAge);
-        alert("Item adicionado!");
+        try {
+          // Envia os dados para o servidor e aguarda a resposta com o diagnóstico
+          const result = await postItem(inputPatient, inputPreg, inputPlas, inputPres, inputSkin, inputTest, inputMass, inputPedi, inputAge);
+            // Limpa o formulário
+          document.getElementById("newInput").value = "";
+          document.getElementById("newPreg").value = "";
+          document.getElementById("newPlas").value = "";
+          document.getElementById("newPres").value = "";
+          document.getElementById("newSkin").value = "";
+          document.getElementById("newTest").value = "";
+          document.getElementById("newMass").value = "";
+          document.getElementById("newPedi").value = "";
+          document.getElementById("newAge").value = "";
+          
+          // Recarrega a lista completa para mostrar o novo paciente com o diagnóstico
+          await refreshList();
+          
+          // Mostra mensagem de sucesso com o diagnóstico
+          const diagnostico = result.outcome === 1 ? "DIABÉTICO" : "NÃO DIABÉTICO";
+          alert(`Paciente adicionado com sucesso!\nDiagnóstico: ${diagnostico}`);
+          
+          // Scroll para a tabela para mostrar o novo resultado
+          document.querySelector('.items').scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+          });
+          
+        } catch (error) {
+          console.error('Erro ao adicionar paciente:', error);
+          alert("Erro ao adicionar paciente. Tente novamente.");
+        }
       }
     })
     .catch((error) => {
       console.error('Error:', error);
+      alert("Erro ao verificar paciente existente. Tente novamente.");
     });
 }
 
@@ -169,29 +228,32 @@ const newItem = async (event) => {
   Função para inserir items na lista apresentada
   --------------------------------------------------------------------------------------
 */
-const insertList = (namePatient, preg, plas,pres, skin, test, mass, pedi, age, outcome) => {
-  var item = [namePatient, preg, plas,pres, skin, test, mass, pedi, age, outcome];
+const insertList = (namePatient, preg, plas, pres, skin, test, mass, pedi, age, outcome) => {
+  var item = [namePatient, preg, plas, pres, skin, test, mass, pedi, age];
   var table = document.getElementById('myTable');
   var row = table.insertRow();
 
+  // Insere as células com os dados do paciente
   for (var i = 0; i < item.length; i++) {
     var cell = row.insertCell(i);
     cell.textContent = item[i];
   }
 
+  // Insere a célula do diagnóstico com styling
+  var diagnosticCell = row.insertCell(item.length);
+  const diagnosticText = outcome === 1 ? "DIABÉTICO" : "NÃO DIABÉTICO";
+  diagnosticCell.textContent = diagnosticText;
+  
+  // Aplica styling baseado no diagnóstico
+  if (outcome === 1) {
+    diagnosticCell.className = "diagnostic-positive";
+  } else {
+    diagnosticCell.className = "diagnostic-negative";
+  }
+
+  // Insere o botão de deletar
   var deleteCell = row.insertCell(-1);
   insertDeleteButton(deleteCell);
-
-
-  document.getElementById("newInput").value = "";
-  document.getElementById("newPreg").value = "";
-  document.getElementById("newPlas").value = "";
-  document.getElementById("newPres").value = "";
-  document.getElementById("newSkin").value = "";
-  document.getElementById("newTest").value = "";
-  document.getElementById("newMass").value = "";
-  document.getElementById("newPedi").value = "";
-  document.getElementById("newAge").value = "";
 
   removeElement();
 }
