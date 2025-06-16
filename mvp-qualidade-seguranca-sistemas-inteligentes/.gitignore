@@ -332,4 +332,7 @@ db/
 database/
 *.sqlite3
 
+# Vscode settings
+.vscode/
+
 # End of https://www.toptal.com/developers/gitignore/api/python,macos,visualstudiocode,flask,jupyternotebooks
