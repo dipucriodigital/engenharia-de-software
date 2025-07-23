@@ -10,7 +10,7 @@ O material está organizado em três aulas, além de um diretório de imagens e 
 * [Aula 1](./aula-1): Introdução ao uso de HTML.
 * [Aula 2](./aula-2): Aplicação de CSS em páginas HTML.
 * [Aula 3](./aula-3): Programação JavaScript do lado do cliente.
-* [Imagens](./imagens): Programação JavaScript do lado do cliente.
+* [Imagens](./imagens): Arquivos de imagens utilizados nos exercícios e roteiros.
 * [Errata](./Errata): Correções de erros identificados no material.
 
 
