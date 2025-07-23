@@ -17,9 +17,9 @@ O material está organizado em três aulas, além de um diretório de imagens e 
 ## Como usar esse material
 
 Cada aula inclui:
-- Exercícios de fixação: Problemas práticos para consolidação do aprendizado.
-- Desafios: Atividades complementares para aprofundamento.
-- Soluções sugeridas: Exemplos de resoluções para os exercícios propostos.
+- **Exercícios de fixação**: Problemas práticos para consolidação do aprendizado.
+- **Desafios**: Atividades complementares para aprofundamento.
+- **Soluções sugeridas**: Exemplos de resoluções para os exercícios propostos.
 
 ### Orientação para os Exercícios
 
@@ -29,5 +29,5 @@ Cada aula inclui:
 
 ### Estudos Dirigidos
 
-A [Aula 3](./aula-3) 3 inclui uma seção de Estudos Dirigidos focada em estruturas de desvios e repetições.
+A [Aula 3](./aula-3) inclui uma seção de Estudos Dirigidos focada em estruturas de desvios e repetições.
 Este material é opcional e voltado para alunos que concluíram a disciplina antes do prazo e desejam explorar tópicos mais avançados, ainda que introdutórios.
