@@ -13,6 +13,11 @@ O material está organizado em três aulas, além de um diretório de imagens e 
 * [Imagens](./imagens): Arquivos de imagens utilizados nos exercícios e roteiros.
 * [Errata](./Errata): Correções de erros identificados no material.
 
+> [!WARNING]
+> Durante a aula 1, o site do jogo vai ficar com uma aparência HORRÍVEL!
+
+> [!WARNING]
+> Até o final da aula 2, o site do jogo não vai interagir com o usuário.
 
 ## Como usar esse material
 
@@ -20,6 +25,21 @@ Cada aula inclui:
 - **Exercícios de fixação**: Problemas práticos para consolidação do aprendizado.
 - **Desafios**: Atividades complementares para aprofundamento.
 - **Soluções sugeridas**: Exemplos de resoluções para os exercícios propostos.
+
+Essa disciplina foi construída em cima de dois grandes exemplos e alguns outros pequenos. 
+Nós temos:
+- **Um site de notícias**: desenvolvido nesse repositório utilizando apenas HTML e CSS
+- **Um jogo Web**: desenvolvido no material de estudo disponível no site da +A para a PUC.
+Aqui você encontra o jogo usando somente HTML, HTML com CSS e completo, com HTML, CSS e JavaScript.
+
+Esta disciplina introdutória foca exclusivamente em tecnologias de front-end, ou seja, não abordamos o armazenamento de novas notícias ou a pontuação de jogadores.
+Esses tópicos, relacionados a banco de dados e desenvolvimento full-stack, serão explorados em uma disciplina futura para os interessados em seguir essa área.
+
+> [!NOTE]
+> E o mais importante!
+> Façam tentativas, modifiquem o layout e o comportamento.
+> Pensem em problemas que vocês poderiam resolver.
+> Sejam criativos!!!
 
 ### Orientação para os Exercícios
 
