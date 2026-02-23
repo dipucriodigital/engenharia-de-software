@@ -2,6 +2,20 @@
 
 ## Aula 1
 
+### Tags
+
+> O texto descreve tags e atributos usando a tag `<img>` como exemplo, mas falha informando que ela possui o atributo `img`. 
+> Na verdade a tag `<img>` possui o atributo `src`.
+> 
+> No lugar de:
+> ```
+> Por exemplo, o atributo href da tag <a> permite especificar o endereço do link, enquanto na tag <img> usamos o atributo img para informar a imagem e o atributo alt para descrevê-la.
+> ```
+> o texto deveria ser:
+> ```
+> Por exemplo, o atributo href da tag <a> permite especificar o endereço do link, enquanto na tag <img> usamos o atributo **src** para informar a imagem e o atributo alt para descrevê-la.
+> ```
+
 ### Técnica Aplicada
 
 > Na figura que mostra o problema de espaço entre os algarismos usando imagens com display de 7 segmentos (**Mantendo o foco**), as duas imagens estão iguais.
